@@ -30,5 +30,30 @@
     double pib;
     int pontos_turisticos;
 
+    //Cadastro da Cidade
+    printf("Cadastro da Carta- Cidade\n");
+    printf("Código da Cidade (ex: A01,A02,B01,B02): ");
+    scanf("%s", codigo);
+    printf("Nome da Cidade: ");
+    scanf("%s", nome);
+    printf("População: ");
+    scanf("%d", &populacao);
+    printf("Área (km²): ");
+    scanf("%f", &area);
+    printf("PIB (em bilhões): ");
+    scanf("%lf", &pib);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%d", &pontos_turisticos);
+
+    //Exibindo os dados cadastrados
+    printf("\nCarta cadastrada:\n");
+    printf("Código: %s\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("População: %d habitantes\n", populacao);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2lf bilhões\n", pib);
+    printf("Pontos turísticos: %d\n", pontos_turisticos);
+    
+    return 0;
 
     }
