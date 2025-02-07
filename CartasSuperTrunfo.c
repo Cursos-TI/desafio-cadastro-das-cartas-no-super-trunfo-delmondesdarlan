@@ -1,24 +1,7 @@
-//#include <stdio.h>
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-//int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
- //return 0;
-//}
+
 #include <stdio.h>
+#include <time.h>
   
   int main(){
 
@@ -29,6 +12,12 @@
     float area; //Será baseada em km²
     double pib;
     int pontos_turisticos;
+    time_t t;
+        struct tm *infoTempo;
+
+    // Obtendo a data e hora atual do sistema
+    time(&t);
+     infoTempo = localtime(&t);
 
     //Cadastro da Cidade
     printf("Cadastro da Carta- Cidade\n");
@@ -53,6 +42,10 @@
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2lf bilhões\n", pib);
     printf("Pontos turísticos: %d\n", pontos_turisticos);
+
+    // Exibir data e hora separadamente no final do Código
+    printf("Data: %02d/%02d/%02d\n", infoTempo->tm_mday, infoTempo->tm_mon + 1, infoTempo->tm_year % 100);
+    printf("Hora: %02d:%02d\n", infoTempo->tm_hour, infoTempo->tm_min);
     
     return 0;
 
